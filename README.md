@@ -1,13 +1,18 @@
-# springcloud-demo1
+# springCloudFamily
 微服务架构初探
 1个eureka微服务注册中心
+1个config配置中心
+1个hystrix-dashboard监控仪表
+1个turbine监控日志收集器
 1个zuul路由器
 3个web应用
 
 # 启动应用
-【必须】先启动eureka模块的EurekaServer类的main（springboot），直接运行
-然后是zuul模块的ZuulServer类的main （springboot），直接运行
-再是3个web模块的WebApplication类的main （springboot），直接运行
+先启动eureka注册中心，
+再启动config配置中心，
+再启动zuul路由器，
+接着启动3个web应用，
+最后启动turbine监控日志收集器和dashboard监控仪表。
 
 # 访问
 http://localhost:7001  eureka web管理
