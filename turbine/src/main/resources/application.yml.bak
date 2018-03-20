@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: turbine
+server:
+  port: 8002
+turbine:
+  app-config: web1,web2,web3   ##需要监控的服务名
+  aggregator:
+    clusterConfig: "default" ##需要监控的服务集群名
+  clusterNameExpression: metadata['cluster']
+
+eureka:
+  instance:
+    preferIpAddress: true
+    statusPageUrlPath: /info.html
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
